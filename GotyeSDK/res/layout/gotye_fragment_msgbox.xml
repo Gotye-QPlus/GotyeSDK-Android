@@ -1,0 +1,14 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <include layout="@layout/gotye_fragment_title" android:id="@+id/gotye_top_head"/>
+
+
+    <com.gotye.sdk.ui.view.expandlistview.GotyeExpandableListView
+        android:id="@+id/gotye_exp_list_msgbox"
+        android:layout_below="@+id/gotye_top_head"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        style="@style/GotyeListViewStyle"/>
+</RelativeLayout>

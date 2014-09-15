@@ -1,0 +1,21 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="gotye_padding_left_right">12dip</dimen>
+    <dimen name="gotye_icon_text_margin">10dip</dimen>
+    <dimen name="gotye_message_voice_len">75dip</dimen>
+    <dimen name="gotye_message_pannel_width">60dip</dimen>
+    <dimen name="gotye_message_pannel_padding">50dip</dimen>
+    <dimen name="gotye_head_icon_size">40dip</dimen>
+    <dimen name="gotye_user_list_spacing">10dip</dimen>
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+
+    
+     <dimen name="gotye_land_title_name">18dip</dimen>
+</resources>

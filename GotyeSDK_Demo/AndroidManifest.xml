@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gotye.gotyesdk.demo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:targetSdkVersion="19"
+        android:minSdkVersion="7"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:name="com.gotye.gotyesdk_demo.MyApplication"
+        android:icon="@drawable/gotye_default_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.gotye.gotyesdk_demo.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gotye.sdk.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|fontScale">
+        </activity>
+        <activity
+            android:name="com.gotye.sdk.ui.activities.GotyeMessageActivity"
+            android:launchMode="singleTop"
+            android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|fontScale"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        
+        <service android:name="com.gotye.sdk.GotyeService"></service>
+    </application>
+
+</manifest>

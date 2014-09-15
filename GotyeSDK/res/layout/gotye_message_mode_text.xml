@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:paddingRight="70dip"
+    android:paddingBottom="10dip">
+
+    <com.gotye.sdk.ui.view.imageview.AsycImageView
+        android:id="@+id/gotye_item_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/gotye_time_tip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="10dip" />
+
+    <View
+        android:id="@+id/gotye_name_right"
+        android:layout_width="10dip"
+        android:layout_height="1dip"
+        android:layout_toRightOf="@+id/gotye_item_icon" />
+
+    <TextView
+        android:id="@+id/gotye_item_name"
+        style="@style/GotyeTitleTextSmallStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/gotye_name_right"
+        android:layout_below="@+id/gotye_item_icon"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="5dip"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/gotye_chat_name"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/gotye_item_msg_text"
+        style="@style/GotyeMessageTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/gotye_item_icon"
+        android:layout_marginLeft="@dimen/gotye_icon_text_margin"
+        android:layout_toRightOf="@+id/gotye_item_icon"
+        android:background="@drawable/gotye_bg_msg_voice_selector"
+        android:textSize="16sp"
+        android:gravity="center_vertical" />
+
+    <TextView
+        android:id="@+id/gotye_time_tip"
+        style="@style/GotyeTitleTextSmallStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dip"
+        android:textSize="14sp"
+         android:textColor="@color/gotye_chat_name"
+        android:gravity="center" />
+
+</RelativeLayout>

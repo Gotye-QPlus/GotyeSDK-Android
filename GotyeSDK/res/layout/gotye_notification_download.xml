@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white" >
+
+    <ImageView
+        android:id="@+id/gotye_notification_icon"
+        android:layout_width="45dip"
+        android:layout_height="45dip"
+        android:layout_marginLeft="10dip" />
+
+    <TextView
+        android:id="@+id/gotye_notification_title"
+        style="@style/GotyeListViewTextStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:textSize="14sp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/gotye_notification_icon" />
+
+    <ProgressBar
+        android:id="@+id/gotye_notification_progress"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gotye_notification_title"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_toRightOf="@+id/gotye_notification_icon" />
+
+    <TextView
+        android:id="@+id/gotye_notification_content"
+        style="@style/GotyeTitleTextSmallStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gotye_notification_progress"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/gotye_notification_icon" />
+
+</RelativeLayout>

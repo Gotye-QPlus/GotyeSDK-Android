@@ -1,0 +1,163 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/gotye_item_normal_room"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/gotye_bg_room_selector_nn" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="5dip" >
+
+            <com.gotye.sdk.ui.view.imageview.AsycImageView
+                android:id="@+id/gotye_item_icon_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true" />
+
+            <TextView
+                android:id="@+id/gotye_item_text_room"
+                style="@style/GotyeListViewTextStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignBottom="@+id/gotye_item_icon_room"
+                android:layout_alignTop="@+id/gotye_item_icon_room"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_toLeftOf="@+id/gotye_item_btn_enter"
+                android:layout_toRightOf="@+id/gotye_item_icon_room"
+                android:ellipsize="end"
+                android:textColor="@color/gotye_item_room_normal_text"
+                android:gravity="center_vertical|left"
+                android:singleLine="true"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/gotye_item_btn_enter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/gotye_item_icon_room"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/gotye_item_icon_room"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="18dip"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/gotye_bg_enter_icon_nn" />
+
+            <ImageView
+                android:id="@+id/gotye_item_room_spilt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/gotye_item_text_room"
+                android:layout_below="@+id/gotye_item_icon_room"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/gotye_bg_spilt_romm_short" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/gotye_item_top_room"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="7dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="7dip"
+        android:visibility="visible" >
+
+        <View
+            android:id="@+id/gotye_item_top_room_first_item"
+            android:layout_width="1dip"
+            android:layout_height="9dip" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/gotye_room_top"
+            android:layout_alignRight="@+id/gotye_room_top"
+            android:layout_below="@+id/gotye_item_top_room_first_item"
+            android:layout_marginLeft="2dip"
+            android:layout_marginTop="2dip"
+            android:background="@drawable/gotye_bg_room_shdow_nn" />
+
+        <RelativeLayout
+            android:id="@+id/gotye_room_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gotye_item_top_room_first_item"
+            android:layout_centerHorizontal="true" >
+
+            <com.gotye.sdk.ui.view.imageview.AsycImageView
+                android:id="@+id/gotye_itemtop_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:scaleType="fitXY" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/gotye_itemtop_icon"
+                android:background="@drawable/gotye_bg_room_top_nn" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="20dip"
+                    android:layout_toLeftOf="@+id/gotye_item_top_image" >
+
+                    <ImageView
+                        android:id="@+id/gotye_item_top_image_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/gotye_item_top_room_name"
+                        android:layout_marginTop="4dip"
+                        android:src="@drawable/gotye_icon_small_house_nn" />
+
+                    <TextView
+                        android:id="@+id/gotye_item_top_room_name"
+                        style="@style/GotyeListViewTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dip"
+                        android:layout_toRightOf="@+id/gotye_item_top_image_home"
+                        android:ellipsize="end"
+                        android:lineSpacingExtra="5dip"
+                        android:maxLines="2"
+                        android:text=""
+                        android:textColor="@color/gotye_item_room_top_text"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/gotye_item_top_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/gotye_item_top_room_last_item"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/gotye_item_top_room"
+        android:paddingTop="7dip"
+        android:scaleType="fitXY"
+        android:src="@drawable/gotye_bg_spilt_romm_short_double" />
+
+</RelativeLayout>

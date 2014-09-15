@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/gotye_bg_total"
+    tools:context="com.gotye.sdk.MainActivity">
+
+    <com.gotye.sdk.ui.view.viewpagger.GotyeViewPager
+        android:id="@+id/gotye_tab_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/white"
+        android:layout_above="@+id/gotye_tab_host"/>
+
+    <com.gotye.sdk.ui.view.tab.GotyeTabHost
+        android:id="@+id/gotye_tab_host"
+        android:layout_width="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

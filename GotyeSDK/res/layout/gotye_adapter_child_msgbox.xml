@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout android:id="@+id/gotye_item_child_msgbox_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/gotye_item_icon_hide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gotye_icon_contact_1"
+            android:visibility="invisible"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dip"
+            android:layout_marginLeft="@dimen/gotye_padding_left_right"/>
+
+        <ImageView
+            android:id="@+id/gotye_item_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:layout_alignBottom="@+id/gotye_item_icon_hide"
+            android:layout_alignTop="@+id/gotye_item_icon_hide"
+            android:layout_alignLeft="@+id/gotye_item_icon_hide"
+            android:layout_alignRight="@+id/gotye_item_icon_hide" />
+
+        <TextView
+            android:id="@+id/gotye_item_contact_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:layout_toRightOf="@+id/gotye_item_icon"
+            android:layout_alignBottom="@+id/gotye_item_icon_hide"
+            android:layout_marginLeft="@dimen/gotye_icon_text_margin"
+            style="@style/GotyeListViewTextStyle"
+            android:layout_alignTop="@+id/gotye_item_icon_hide" />
+
+        <TextView
+            android:id="@+id/gotye_item_msg_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:background="@drawable/gotye_bg_msg_tips"
+            style="@style/GotyeTitleTextSmallStyle"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/gotye_item_contact_name"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/gotye_btn_contact_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/gotye_icon_text_margin"
+            android:clickable="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/gotye_btn_delete_selector"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/gotye_btn_contact_delete2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/gotye_icon_text_margin"
+            android:clickable="true"
+            android:layout_toRightOf="@+id/gotye_btn_contact_delete"
+            android:background="@android:color/transparent"
+            android:src="@drawable/gotye_btn_delete_selector"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <ImageView android:id="@+id/gotye_item_child_msgbox_spilt"
+        android:layout_marginTop="5dip"
+        android:layout_below="@+id/gotye_item_child_msgbox_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gotye_bg_spilt_contact" />
+</RelativeLayout>

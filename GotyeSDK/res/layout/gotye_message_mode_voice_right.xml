@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="10dip" >
+
+    <RelativeLayout
+        android:id="@+id/gotye_item_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <com.gotye.sdk.ui.view.imageview.AsycImageView
+            android:id="@+id/gotye_item_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/gotye_time_tip"
+            android:layout_marginRight="20dip"
+            android:layout_marginTop="10dip" />
+
+        <View
+            android:id="@+id/gotye_name_left"
+            android:layout_width="10dip"
+            android:layout_height="1dip"
+            android:layout_toLeftOf="@+id/gotye_item_icon" />
+
+        <TextView
+            android:id="@+id/gotye_item_name"
+            style="@style/GotyeTitleTextSmallStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/gotye_name_left"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/gotye_item_icon"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="5dip"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/gotye_chat_name"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/gotye_item_msg_voice"
+            style="@style/GotyeTitleTextSmallStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/gotye_item_icon"
+            android:layout_marginRight="@dimen/gotye_icon_text_margin"
+            android:layout_toLeftOf="@+id/gotye_item_icon"
+            android:background="@drawable/gotye_bg_msg_voice_right_selector"
+            android:drawablePadding="5dip"
+            android:drawableRight="@drawable/gotye_anim_voice_right"
+            android:gravity="left|center_vertical"
+            android:text="3&apos;&apos;"
+            android:singleLine="true"
+            android:textColor="@color/gotye_text_white"
+            android:textSize="16sp" />
+
+        <ProgressBar
+            android:id="@+id/gotye_item_msg_voice_progress"
+            style="@android:style/Widget.ProgressBar.Small.Inverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/gotye_item_msg_voice"
+            android:layout_marginLeft="70dip"
+            android:layout_marginRight="3dip"
+            android:layout_toLeftOf="@+id/gotye_item_msg_voice"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/gotye_time_tip"
+            style="@style/GotyeTitleTextSmallStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:textSize="14sp"
+             android:textColor="@color/gotye_chat_name"
+            android:gravity="center" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/gotye_msg_tip"
+        style="@style/GotyeTitleTextSmallStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gotye_item_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/gotye_bg_time_tip"
+        android:text="@string/gotye_forbidden_send_tip"
+        android:textColor="@android:color/black" />
+
+</RelativeLayout>

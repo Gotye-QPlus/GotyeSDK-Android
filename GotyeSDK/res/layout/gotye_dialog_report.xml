@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/gotye_report_title"
+            style="@style/GotyeTitleTextStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/gotye_btn_dialog_close"
+            android:layout_alignTop="@+id/gotye_btn_dialog_close"
+            android:gravity="center"
+            android:text="@string/gotye_report" />
+
+        <ImageButton
+            android:id="@+id/gotye_btn_dialog_close"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@android:color/transparent"
+            android:src="@drawable/gotye_btn_dialog_close_selector" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="30dip"
+        android:layout_marginRight="30dip" >
+        
+        <EditText
+            android:id="@+id/gotye_report_edit"
+            style="@style/GotyeTitleTextMiddleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/gotye_username"
+            android:layout_alignRight="@+id/gotye_username"
+            android:layout_alignTop="@+id/gotye_user_type_1"
+            android:layout_alignBottom="@+id/gotye_user_type_3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/gotye_bg_chat_edit_selector"
+            android:lines="5"
+            android:textColor="@android:color/black"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/gotye_username"
+            style="@style/GotyeTitleTextMiddleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/gotye_bg_report_id"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/gotye_user_type_1"
+            style="@style/GotyeTitleTextMiddleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/gotye_username"
+            android:layout_alignRight="@+id/gotye_username"
+            android:layout_below="@+id/gotye_username"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/gotye_bg_report_selector"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/gotye_text_white" />
+
+        <TextView
+            android:id="@+id/gotye_user_type_2"
+            style="@style/GotyeTitleTextMiddleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/gotye_username"
+            android:layout_alignRight="@+id/gotye_username"
+            android:layout_below="@+id/gotye_user_type_1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/gotye_bg_report_selector"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/gotye_text_white" />
+
+        <TextView
+            android:id="@+id/gotye_user_type_3"
+            style="@style/GotyeTitleTextMiddleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/gotye_username"
+            android:layout_alignRight="@+id/gotye_username"
+            android:layout_below="@+id/gotye_user_type_2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/gotye_bg_report_selector"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/gotye_text_white" />
+
+        <Button
+            android:id="@+id/gotye_report_cancel"
+            style="@style/GotyeTitleTextMiddleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/gotye_username"
+            android:layout_alignRight="@+id/gotye_username"
+            android:layout_below="@+id/gotye_user_type_3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/gotye_btn_cancel_selector"
+            android:text="@string/gotye_cancel"
+            android:textColor="@color/gotye_color_report_cancel_selector" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="10dip"
+        android:layout_marginTop="10dip" />
+
+</LinearLayout>

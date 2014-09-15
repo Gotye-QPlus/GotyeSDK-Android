@@ -1,0 +1,452 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gotye_chat_content"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/gotye_bg_total" >
+
+    <com.gotye.sdk.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/gotye_msg_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/gotye_chat_pannel"
+        android:layout_below="@+id/gotye_top_head"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dip"
+        android:layout_toRightOf="@+id/gotye_top_head_land"
+        android:background="@drawable/gotye_bg_chat"
+        android:listSelector="@android:color/transparent" />
+
+    <RelativeLayout
+        android:id="@+id/gotye_top_pannel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gotye_top_head"
+        android:background="@drawable/gotye_bg_chat_top"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/gotye_user_list"
+            android:layout_width="fill_parent"
+            android:layout_height="45dip"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/gotye_middle"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/gotye_bg_chat_top_list"
+            android:drawablePadding="10dip"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="30dip"
+            android:text="@string/gotye_room_user_list"
+            android:textColor="@color/gotye_text_white"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:typeface="sans" />
+
+        <ImageView
+            android:id="@+id/gotye_middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/gotye_bg_chat_top_spilt" />
+
+        <Button
+            android:id="@+id/gotye_mini"
+            android:layout_width="fill_parent"
+            android:layout_height="45dip"
+            android:layout_toRightOf="@+id/gotye_middle"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/gotye_bg_chat_top_mini"
+            android:drawablePadding="10dip"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="30dip"
+            android:text="@string/gotye_back_to_game"
+            android:textColor="@color/gotye_text_white"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:typeface="sans" />
+    </RelativeLayout>
+    
+     <RelativeLayout
+        android:id="@+id/gotye_top_head_land"
+        android:layout_width="130dip"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/gotye_bg_title_nn_1"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/img_customer_head_land"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dip"
+            android:src="@drawable/gotye_head_port" />
+
+        <TextView
+            android:id="@+id/chatwith_name_land"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_customer_head_land"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="15dip"
+            android:gravity="center_horizontal"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:lineSpacingExtra="5dip"
+            android:text="@string/gotye_title_room"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/gotye_land_title_name"
+            android:textStyle="normal"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:typeface="sans" />
+
+        <LinearLayout
+            android:id="@+id/btn_chat_back_land"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chatwith_name_land"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="17dip"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gotye_title_spilt_land" />
+
+            <Button android:id="@+id/btn_chat_back_land2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/gotye_btn_back_tip_selector_n"
+                android:gravity="center"
+                android:paddingBottom="10dip"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip"
+                android:paddingTop="10dip"
+                android:drawablePadding="10dip"
+                android:text="@string/gotye_back"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/gotye_land_title_name"
+                android:textStyle="normal"
+                android:typeface="sans" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gotye_title_spilt_land" />
+            
+            <Button android:id="@+id/gotye_user_list_land"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:paddingBottom="10dip"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip"
+                android:paddingTop="10dip"
+                android:drawablePadding="10dip"
+                android:text="@string/gotye_room_user_list"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/gotye_land_title_name"
+                android:textStyle="normal"
+                android:typeface="sans" />
+            
+             <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gotye_title_spilt_land" />
+             
+             <Button android:id="@+id/gotye_mini_land"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:paddingBottom="10dip"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip"
+                android:paddingTop="10dip"
+                android:drawablePadding="10dip"
+                android:text="@string/gotye_back_to_game"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/gotye_land_title_name"
+                android:textStyle="normal"
+                android:typeface="sans" />
+            
+             <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gotye_title_spilt_land" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/gotye_top_head"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gotye_bg_title_nn_1" >
+
+        <RelativeLayout
+            android:id="@+id/gotye_btn_top_leave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dip"
+            android:background="@drawable/gotye_btn_back_selector_n" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/gotye_btn_back_tip_selector_n"
+                android:drawablePadding="3dip"
+                android:gravity="center"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip"
+                android:text="@string/gotye_back"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:typeface="sans" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/gotye_text_top_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/gotye_btn_top_leave_hide"
+            android:layout_toRightOf="@+id/gotye_btn_top_leave"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:typeface="sans" />
+
+        <RelativeLayout
+            android:id="@+id/gotye_btn_top_leave_hide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="13dip"
+            android:background="@drawable/gotye_btn_back_selector_n"
+            android:visibility="invisible" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/gotye_btn_back_tip_selector_n"
+                android:drawablePadding="3dip"
+                android:gravity="center"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip"
+                android:text="@string/gotye_back"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:typeface="sans" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/gotye_btn_top_pannel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="18dip"
+            android:background="@drawable/gotye_btn_title_more_selector_n"
+            android:clickable="true" />
+    </RelativeLayout>
+
+    <!--
+         <include
+        android:id="@+id/gotye_top_head"
+        layout="@layout/gotye_fragment_title" />
+        
+         	<RelativeLayout
+        android:id="@+id/gotye_chat_pannel_hide"
+        style="@style/GotyeContentPaddingStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_above="@+id/emoti_list"
+        android:background="@drawable/gotye_bg_tab_bottom"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip" >
+
+    </RelativeLayout>
+    -->
+
+    <LinearLayout
+        android:id="@+id/gotye_chat_pannel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/gotye_top_head_land"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            style="@style/GotyeContentPaddingStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gotye_bg_tab_bottom"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip" >
+
+            <ImageButton
+                android:id="@+id/gotye_btn_to_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/gotye_btn_to_voice_selector" />
+
+            <ImageButton
+                android:id="@+id/gotye_btn_chat_pannel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="7dip"
+                android:layout_toRightOf="@+id/gotye_btn_to_text"
+                android:background="@android:color/transparent"
+                android:src="@drawable/gotye_btn_chat_pannel_selector" />
+
+            <RelativeLayout
+                android:id="@+id/gotye_text_area"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="7dip"
+                android:layout_toRightOf="@+id/gotye_btn_chat_pannel" >
+
+                <EditText
+                    android:id="@+id/gotye_btn_chat_edit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="7dip"
+                    android:layout_toLeftOf="@+id/gotye_btn_send_text"
+                    android:background="@drawable/gotye_btn_chat_edit_normal"
+                    android:maxLength="500"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:id="@+id/gotye_btn_send_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/gotye_btn_send_text_selector"
+                    android:gravity="center"
+                    android:text="@string/gotye_send"
+                    android:textColor="@color/gotye_color_send_selector"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    android:typeface="sans" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/gotye_btn_send_voice"
+                style="@style/GotyeTitleTextMiddleStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/gotye_btn_to_text"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/gotye_btn_to_text"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="7dip"
+                android:layout_toRightOf="@+id/gotye_btn_chat_pannel"
+                android:background="@drawable/gotye_btn_send_voice_selector"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                android:typeface="sans"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <GridView
+            android:id="@+id/emoti_list"
+            android:layout_width="fill_parent"
+            android:layout_height="200dip"
+            android:layout_alignParentBottom="true"
+            android:background="#ffffff"
+            android:columnWidth="40dp"
+            android:fadingEdge="none"
+            android:horizontalSpacing="5dip"
+            android:numColumns="auto_fit"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="5dip"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <ImageView  android:id="@+id/gotye_bolang"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gotye_top_head"
+        android:background="@drawable/gotye_bg_title_n" />
+    
+        <ImageView
+        android:id="@+id/gotye_bolang_land"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="125dip"
+        android:background="@drawable/gotye_bg_title_n_land"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/gotye_image_preview_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/black"
+        android:clickable="true"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/gotye_image_preview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/gotye_image_preview_btn"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/gotye_image_preview_share_area"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignTop="@+id/gotye_image_preview_btn"
+            android:background="@drawable/gotye_bg_tab_bottom"
+            android:clickable="true" >
+
+            <ImageButton
+                android:id="@+id/gotye_image_preview_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/gotye_image_save" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/gotye_image_preview_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    
+
+</RelativeLayout>

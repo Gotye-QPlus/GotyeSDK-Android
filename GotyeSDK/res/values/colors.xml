@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="gotye_bg_gray">#ededed</color>
+    <color name="room_pressed">#2fbdb8</color>
+    <color name="gotye_text_white">#ffffff</color>
+    <color name="gotye_text_dark_gray">#414141</color>
+    <color name="gotye_text_send_pressed">#7690b0</color><!-- R118 G144 B176 -->
+    
+    <color name="gotye_voice_send_pressed">#2dbcba</color>
+    
+    <color name="gotye_chat_name">#767676</color>
+    
+    <color name="gotye_item_room_top_text">#ffffff</color>
+    <color name="gotye_item_room_normal_text">#000000</color>
+    
+    <color name="gotye_pullrefresh_text">#000000</color>
+</resources>

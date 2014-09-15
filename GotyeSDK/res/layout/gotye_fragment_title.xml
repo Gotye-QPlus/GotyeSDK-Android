@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gotye_top_head"
+    style="@style/GotyeTitleStyle"
+    android:layout_alignParentTop="true" >
+
+    <ImageButton
+        android:id="@+id/gotye_btn_top_leave_hide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/gotye_btn_top_leave"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+         android:visibility="invisible"
+        android:layout_marginLeft="@dimen/gotye_icon_text_margin"
+        android:src="@drawable/gotye_btn_user_list_selector" />
+
+    <ImageButton
+        android:id="@+id/gotye_btn_top_leave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+       
+        android:src="@drawable/gotye_btn_leave_selector" />
+    
+    <TextView
+        android:id="@+id/gotye_text_top_text"
+        style="@style/GotyeTitleTextStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:singleLine="true"
+        android:ellipsize="middle"
+        android:layout_toRightOf="@+id/gotye_btn_top_leave_hide"
+        android:layout_toLeftOf="@+id/gotye_btn_top_user_list"
+        android:text="@string/gotye_title_room" />
+
+    <ImageButton
+        android:id="@+id/gotye_btn_top_user_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/gotye_btn_top_text"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:layout_marginRight="@dimen/gotye_icon_text_margin"
+        android:src="@drawable/gotye_btn_user_list_selector" />
+
+    <ImageButton
+        android:id="@+id/gotye_btn_top_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/gotye_btn_close_selector" />
+
+</RelativeLayout>

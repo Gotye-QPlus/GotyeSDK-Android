@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@color/gotye_bg_gray" >
+
+    <ImageView
+        android:id="@+id/gotye_item_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/gotye_item_icon_hide"
+        android:layout_alignLeft="@+id/gotye_item_icon_hide"
+        android:layout_alignParentLeft="true"
+        android:scaleType="fitXY"
+        android:background="@drawable/gotye_bg_round_frame"
+        android:layout_alignRight="@+id/gotye_item_icon_hide"
+        android:layout_alignTop="@+id/gotye_item_icon_hide" />
+
+    <ImageView
+        android:id="@+id/gotye_item_icon_hide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gotye_icon_room_1"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/gotye_item_name"
+        style="@style/GotyeTitleTextSmallStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/gotye_item_icon_hide"
+        android:layout_alignRight="@+id/gotye_item_icon_hide"
+        android:layout_below="@+id/gotye_item_icon_hide"
+        android:layout_toRightOf="@+id/gotye_item_icon_hide"
+        android:ellipsize="middle"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@android:color/black" />
+
+</RelativeLayout>

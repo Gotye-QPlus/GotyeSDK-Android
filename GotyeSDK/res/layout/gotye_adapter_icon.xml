@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dip"
+    android:paddingBottom="5dip">
+
+    <com.gotye.sdk.ui.view.imageview.AsycImageView
+        android:id="@+id/gotye_item_icon"
+        android:layout_width="60dip"
+        android:layout_height="60dip"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/gotye_bg_round_frame"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/gotye_item_name"
+        style="@style/GotyeTitleTextSmallStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gotye_item_icon"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="5dip"
+        android:paddingBottom="5dip"
+        android:maxLength="5"
+        android:textSize="14sp"
+        android:textColor="@color/gotye_chat_name"
+		android:lines="1"/>
+
+</RelativeLayout>

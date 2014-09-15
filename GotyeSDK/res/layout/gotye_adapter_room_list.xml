@@ -1,0 +1,147 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/gotye_item_normal_room"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="5dip"
+        style="@style/GotyeListViewItemStyle">
+
+        <com.gotye.sdk.ui.view.imageview.AsycImageView
+            android:id="@+id/gotye_item_icon_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/gotye_item_icon_room_hide"
+            android:layout_alignRight="@+id/gotye_item_icon_room_hide"
+            android:layout_alignTop="@+id/gotye_item_icon_room_hide"
+            android:layout_alignBottom="@+id/gotye_item_icon_room_hide"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:background="@drawable/gotye_bg_round_frame"
+            android:layout_alignParentLeft="true" />
+
+        <ImageView
+            android:id="@+id/gotye_item_icon_room_hide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
+            android:src="@drawable/gotye_icon_room_1"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@+id/gotye_item_text_room"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/gotye_icon_text_margin"
+            android:layout_marginRight="@dimen/gotye_icon_text_margin"
+            android:layout_alignTop="@+id/gotye_item_icon_room_hide"
+            android:layout_alignBottom="@+id/gotye_item_icon_room_hide"
+            style="@style/GotyeListViewTextStyle"
+            android:gravity="center_vertical|left"
+            android:layout_toLeftOf="@+id/gotye_item_btn_enter"
+            android:layout_toRightOf="@+id/gotye_item_icon_room_hide" />
+
+        <ImageView
+            android:id="@+id/gotye_item_btn_enter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside"
+            android:clickable="true"
+            android:layout_alignTop="@+id/gotye_item_icon_room_hide"
+            android:layout_alignBottom="@+id/gotye_item_icon_room_hide"
+            android:src="@drawable/gotye_btn_enter_room_selector"
+            android:background="@android:color/transparent"
+            android:layout_alignParentRight="true" />
+
+
+    </RelativeLayout>
+
+    <View android:id="@+id/gotye_item_room_spilt"
+        android:layout_below="@+id/gotye_item_normal_room"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/gotye_bg_spilt_romm" />
+
+    <RelativeLayout
+        android:id="@+id/gotye_item_top_room"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        style="@style/GotyeListViewItemStyle"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/gotye_bg_item_hot_room"
+            android:layout_marginTop="10dip">
+
+            <ImageView
+                android:id="@+id/gotye_itemtop_icon_hide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:background="@drawable/gotye_bg_big_icon_room_1" />
+
+            <com.gotye.sdk.ui.view.imageview.AsycImageView
+                android:id="@+id/gotye_itemtop_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:layout_alignTop="@+id/gotye_itemtop_icon_hide"
+                android:layout_alignBottom="@+id/gotye_itemtop_icon_hide"
+                android:layout_alignLeft="@+id/gotye_itemtop_icon_hide"
+                android:layout_alignRight="@+id/gotye_itemtop_icon_hide" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignTop="@+id/gotye_itemtop_icon_hide"
+                android:layout_alignBottom="@+id/gotye_itemtop_icon_hide"
+                android:layout_toRightOf="@+id/gotye_itemtop_icon_hide">
+
+                <TextView android:id="@+id/gotye_item_top_room_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:layout_alignParentTop="true"
+                    android:padding="5dip"
+                    style="@style/GotyeTitleTextMiddleStyle"
+                    android:layout_above="@+id/gotye_item_count_area"/>
+
+
+                <RelativeLayout android:id="@+id/gotye_item_count_area"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:layout_marginBottom="25dip"
+                    android:visibility="visible"
+                    android:layout_alignParentBottom="true">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gotye_spilt_item_big"/>
+
+                    <ImageView android:id="@+id/gotye_item_top_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+						android:layout_centerInParent="true"
+                        android:background="@drawable/gotye_icon_hot"/>
+
+                 </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
